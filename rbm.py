@@ -21,9 +21,9 @@ for dirname, _, filenames in os.walk('/kaggle/input'):
 # Any results you write to the current directory are saved as output.
 
 # METHOD 1: Preparing the training set and the test set
-training_set = pd.read_csv('../input/movielens-100k-dataset/ml-100k/u1.base', delimiter = '\t')
+training_set = pd.read_csv('../input/movielens-100k-dataset/ml-100k/u1.base', sep = '\t')
 training_set = np.array(training_set, dtype = 'int')
-test_set = pd.read_csv('../input/movielens-100k-dataset/ml-100k/u1.test', delimiter = '\t')
+test_set = pd.read_csv('../input/movielens-100k-dataset/ml-100k/u1.test', sep = '\t')
 test_set = np.array(test_set, dtype = 'int')
 
 # Getting the number of users and movies
@@ -49,8 +49,8 @@ test_set = convert(test_set)
 
 # METHOD 2: Preparing the training set and the test set
 # # Read data
-# training_set = pd.read_csv('../input/movielens-100k-dataset/ml-100k/u1.base', delimiter='\t').as_matrix()
-# test_set = pd.read_csv('../input/movielens-100k-dataset/ml-100k/u1.test', delimiter='\t').as_matrix()
+# training_set = pd.read_csv('../input/movielens-100k-dataset/ml-100k/u1.base', sep='\t').as_matrix()
+# test_set = pd.read_csv('../input/movielens-100k-dataset/ml-100k/u1.test', sep='\t').as_matrix()
  
 # # Compute counts
 # nb_users = len(set(training_set[:, 0]) | set(test_set[:, 0]))
